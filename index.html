@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+* {
+  margin: 0;
+  padding: 0;
+    box-sizing: border-box;
+}
+body {
+  font-family:  "Roboto", sans-serf;
+}
+
+nav  {
+  color: #4756df;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .5);
+  background-color: white;
+  border-radius: 4px;
+  padding: 1rem;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 70rem;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 2rem;
+  
+}
+.main{
+    width: 50rem;
+    height: 50rem;
+    
+}
+  
+.imgs1{ 
+    height: 6.25rem;
+    width: 6.25rem;
+    border-radius: .30rem;
+}
+  </style>
+</head>
+<body>
+    <nav>
+        <h1>My Gallary</h1>
+      
+  </nav>
+  <section class="container" >
+    <button id="img" class="btn"><img class="main imgs1 " id="imgs"
+      src="./0708-2019-0327197491184814535751-01.jpeg" /></button>
+      
+     
+   
+   
+</section>
+     
+<script>
+    let open = document.getElementById('img');
+open.addEventListener('click', function() {
+    let fullimg = document.getElementById('imgs');
+    fullimg.classList.remove('imgs1');
+})
+
+let close=document.getElementsByTagName("body")[0];
+close.addEventListener ('focusout', function() {
+
+open.style.width = '10%';
+open.style.height = '60%';
+let i=document.getElementById("imgs");
+i.style.width = '6.5rem';
+i.style.height = '6.5rem';
+open.style.transition="all 0.6s"
+i.style.transition="all 0.6s"
+
+
+});
+</script>
+
+</body>
+</html>
